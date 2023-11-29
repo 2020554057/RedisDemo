@@ -31,7 +31,7 @@
             <artifactId>commons-pool2</artifactId>
         </dependency>
 
-        <!--Jackson依赖-->
+        <!--Jackson依赖  序列化和反序列化需要-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

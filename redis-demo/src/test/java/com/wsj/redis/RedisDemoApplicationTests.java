@@ -1,18 +1,17 @@
 package com.wsj.redis;
 
+import com.wsj.redis.pojo.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
-
-import javax.naming.Name;
 
 @SpringBootTest
 class RedisDemoApplicationTests {
 
     //注入redisTemplate
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String,Object> redisTemplate;
 
     //测试使用
     @Test
@@ -23,4 +22,14 @@ class RedisDemoApplicationTests {
         Object name = redisTemplate.opsForValue().get("name");
         System.out.println("name："+name);
     }
+
+    @Test
+    public void testRedisTemplate1(){
+        User user = new User("吴苏杰",22);
+        redisTemplate.opsForValue().set("user:1",user);
+        User o = (User)redisTemplate.opsForValue().get("user:1");
+        System.out.println("user："+o);
+
+    }
+
 }
