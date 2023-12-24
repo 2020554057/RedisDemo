@@ -16,6 +16,8 @@ import org.springframework.data.redis.serializer.RedisSerializer;
  * @Create 2023/11/29 10:03
  * @Version 1.0
  */
+
+//自定义RedisTemplate，修改RedisTemplate的序列化器为GenericJackson2JsonRedisSerializer
 @Configuration
 public class RedisConfig {
 

@@ -11,6 +11,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.util.Map;
 
+//使用StringRedisTemplate，手动将Object对象转为Json和Json转为Object
 @SpringBootTest
 class StringRedisTemplateTests {
 

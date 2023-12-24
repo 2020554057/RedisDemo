@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPoolConfig;
  */
 
 //Jedis连接池配置
-public class JedisConnectionFactory {
+public class JedisConnectionFactory {//这里使用到了工厂模式
     private final static JedisPool jedisPool;
 
     static {
